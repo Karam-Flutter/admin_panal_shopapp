@@ -2,6 +2,7 @@ import 'package:admin_panal_shopapp/data/data_orders.dart';
 import 'package:admin_panal_shopapp/main.dart';
 import 'package:admin_panal_shopapp/model/colors.dart';
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 
 class LiveOdersCart extends StatelessWidget {
   const LiveOdersCart({super.key});
@@ -35,14 +36,31 @@ class LiveOdersCart extends StatelessWidget {
                         style: TextStyle(color: textColors),
                       ),
                       Text(
-                        LiveOrders.liveoders[index].totalcost,
+                        NumberFormat.decimalPatternDigits().format(
+                              LiveOrders.liveoders[index].totalcost,
+                            ) +
+                            " IQD",
                         style: TextStyle(color: textColors),
                       ),
-                      SizedBox(
-                          width: 80,
-                          height: 20,
-                          child: ElevatedButton(
-                              onPressed: () {}, child: Text('Print')))
+                      Row(children: [
+                        SizedBox(
+                          child: Center(
+                            child: ElevatedButton(
+                              onPressed: () {},
+                              child: Text('Print'),
+                            ),
+                          ),
+                        ),
+                        Center(
+                          child: IconButton(
+                            onPressed: () {},
+                            icon: Icon(
+                              Icons.remove_red_eye_sharp,
+                              color: Colors.greenAccent,
+                            ),
+                          ),
+                        ),
+                      ])
                     ],
                   ),
                 ],

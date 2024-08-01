@@ -1,7 +1,7 @@
 class OrdersHomeModel {
   final String name;
   final int index;
-  final String totalcost;
+  final int totalcost;
   final String mobilenumber;
 
   const OrdersHomeModel({
