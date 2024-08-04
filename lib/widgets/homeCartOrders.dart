@@ -1,7 +1,10 @@
 import 'package:admin_panal_shopapp/data/data_orders.dart';
-import 'package:admin_panal_shopapp/main.dart';
+
 import 'package:admin_panal_shopapp/model/colors.dart';
+import 'package:admin_panal_shopapp/widgets/pdfPage.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get_core/get_core.dart';
+import 'package:get/get_navigation/get_navigation.dart';
 import 'package:intl/intl.dart';
 
 class LiveOdersCart extends StatelessWidget {
@@ -51,12 +54,33 @@ class LiveOdersCart extends StatelessWidget {
                             ),
                           ),
                         ),
-                        Center(
-                          child: IconButton(
-                            onPressed: () {},
-                            icon: Icon(
-                              Icons.remove_red_eye_sharp,
-                              color: Colors.greenAccent,
+                        Padding(
+                          padding: const EdgeInsets.only(left: 20),
+                          child: Center(
+                            child: IconButton(
+                              onPressed: () {
+                                Get.dialog(
+                                  AlertDialog(
+                                    content: PDFpage(),
+                                    actions: [
+                                      TextButton(
+                                        onPressed: () {
+                                          Get.back();
+                                        },
+                                        child: Text('Cancel'),
+                                      ),
+                                      TextButton(
+                                        onPressed: () {},
+                                        child: Text('Print'),
+                                      ),
+                                    ],
+                                  ),
+                                );
+                              },
+                              icon: Icon(
+                                Icons.remove_red_eye_sharp,
+                                color: Colors.greenAccent,
+                              ),
                             ),
                           ),
                         ),
