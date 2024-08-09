@@ -43,15 +43,6 @@ class PDFpage extends StatelessWidget {
                       ),
                     ),
                   ),
-                  Container(
-                    child: Text(
-                      'In Num : 12345678',
-                      style: TextStyle(
-                        color: Colors.black,
-                        fontSize: 10,
-                      ),
-                    ),
-                  ),
                 ],
               ),
               Column(
