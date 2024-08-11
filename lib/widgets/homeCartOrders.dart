@@ -1,7 +1,7 @@
 import 'package:admin_panal_shopapp/data/data_orders.dart';
 
 import 'package:admin_panal_shopapp/model/colors.dart';
-import 'package:admin_panal_shopapp/widgets/pdfPage.dart';
+import 'package:admin_panal_shopapp/widgets/InvocePage.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_core/get_core.dart';
 import 'package:get/get_navigation/get_navigation.dart';
@@ -9,7 +9,6 @@ import 'package:intl/intl.dart';
 
 class LiveOdersCart extends StatelessWidget {
   const LiveOdersCart({super.key});
-  
 
   @override
   Widget build(BuildContext context) {
@@ -62,7 +61,7 @@ class LiveOdersCart extends StatelessWidget {
                               onPressed: () {
                                 Get.dialog(
                                   AlertDialog(
-                                    content: PDFpage(),
+                                    content: InvocePage(),
                                     actions: [
                                       TextButton(
                                         onPressed: () {

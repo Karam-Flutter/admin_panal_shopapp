@@ -131,7 +131,7 @@ class ProductPAge extends StatelessWidget {
                       height: MediaQuery.of(context).size.height,
                       width: MediaQuery.of(context).size.width,
                       child: ListView.builder(
-                          itemCount: AllProducts.allProducts.length,
+                          itemCount: 10,
                           itemBuilder: (context, index) {
                             return Container(
                               decoration: BoxDecoration(
