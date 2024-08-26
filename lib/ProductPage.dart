@@ -1,16 +1,23 @@
 import 'package:admin_panal_shopapp/AddProduct.dart';
 import 'package:admin_panal_shopapp/data/data_poduct_Model.dart';
-import 'package:admin_panal_shopapp/main.dart';
+
 import 'package:admin_panal_shopapp/model/colors.dart';
+
 import 'package:admin_panal_shopapp/widgets/responsive.dart';
 import 'package:admin_panal_shopapp/widgets/search.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_core/get_core.dart';
 import 'package:get/get_navigation/get_navigation.dart';
-import 'package:sidebarx/sidebarx.dart';
 
-class ProductPAge extends StatelessWidget {
-  const ProductPAge({super.key});
+class ProductPAge extends StatefulWidget {
+  ProductPAge({super.key});
+
+  @override
+  State<ProductPAge> createState() => _ProductPAgeState();
+}
+
+class _ProductPAgeState extends State<ProductPAge> {
+  bool isSearchClicked = false;
 
   @override
   Widget build(BuildContext context) {
@@ -47,7 +54,26 @@ class ProductPAge extends StatelessWidget {
                         child: SizedBox(
                           height: MediaQuery.of(context).size.height * 0.07,
                           child: ElevatedButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              // Get.dialog(AlertDialog());
+                              Get.dialog(
+                                AlertDialog(
+                                  content: AddProduct(),
+                                  actions: [
+                                    TextButton(
+                                      onPressed: () {
+                                        Get.back();
+                                      },
+                                      child: Text('Cancel'),
+                                    ),
+                                    TextButton(
+                                      onPressed: () {},
+                                      child: Text('Print'),
+                                    ),
+                                  ],
+                                ),
+                              );
+                            },
                             child: Text(
                               'Add Product',
                               style: TextStyle(color: Colors.greenAccent),
@@ -195,6 +221,20 @@ class ProductPAge extends StatelessWidget {
                                           color: Colors.redAccent,
                                         ),
                                       ),
+                                      SizedBox(
+                                        width: 30,
+                                        height: 30,
+                                        child: Checkbox(
+                                          activeColor: Colors.greenAccent,
+                                          checkColor: Colors.white,
+                                          value: isSearchClicked,
+                                          onChanged: (va) {
+                                            setState(() {
+                                              isSearchClicked = va!;
+                                            });
+                                          },
+                                        ),
+                                      )
                                     ],
                                   )
                                 ],

@@ -45,6 +45,10 @@ dependencies:
   qr_flutter: ^4.1.0
 
   syncfusion_flutter_barcodes: ^26.2.8
+  dropdown_textfield: ^1.2.0
+  persistent_bottom_nav_bar: ^6.2.1
+  
+ 
 
 
 

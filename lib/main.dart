@@ -1,9 +1,12 @@
 import 'package:admin_panal_shopapp/AddProduct.dart';
 import 'package:admin_panal_shopapp/ProductPage.dart';
+import 'package:admin_panal_shopapp/dashboardPage.dart';
+
 import 'package:admin_panal_shopapp/homePage.dart';
 
 import 'package:admin_panal_shopapp/model/colors.dart';
 import 'package:admin_panal_shopapp/widgets/responsive.dart';
+import 'package:admin_panal_shopapp/widgets/topbar.dart';
 
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
@@ -43,7 +46,11 @@ class _SidebarXExampleAppState extends State<SidebarXExampleApp> {
           ),
         ),
       ),
-      home: Builder(
+      home:
+          //  HomePage()
+          // CustomTabBarExample()
+
+          Builder(
         builder: (context) {
           final isSmallScreen = MediaQuery.of(context).size.width < 600;
           return Scaffold(
@@ -224,7 +231,7 @@ class ExampleSidebarX extends StatelessWidget {
         ),
         SidebarXItem(
           icon: Icons.favorite,
-          label: 'Favorites',
+          label: 'Dashboard',
           onTap: () {
             Responsive.isMobile(context) ? Navigator.pop(context) : null;
           },
@@ -276,18 +283,24 @@ class _ScreensExample extends StatelessWidget {
     return AnimatedBuilder(
       animation: controller,
       builder: (context, child) {
-        final pageTitle = getTitleByIndex(controller.selectedIndex);
+        // final pageTitle = getTitleByIndex(controller.selectedIndex);
         switch (controller.selectedIndex) {
           case 0:
-            return HomePage();
+            return Homepage(
+                // controller: controller,
+                );
           case 1:
             return ProductPAge();
           case 2:
             return AddProduct();
+          case 3:
+            return DashboardScreen();
+          case 3:
+            return navitest();
 
           default:
             return Text(
-              pageTitle,
+              'pageTitle',
               // style: theme.textTheme.headlineSmall,
               textAlign: TextAlign.center,
             );
@@ -306,7 +319,7 @@ String getTitleByIndex(int index) {
     case 2:
       return 'People';
     case 3:
-      return 'Favorites';
+      return 'Dashboard';
     case 4:
       return 'Custom iconWidget';
     case 5:
