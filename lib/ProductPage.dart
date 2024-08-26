@@ -1,8 +1,6 @@
 import 'package:admin_panal_shopapp/AddProduct.dart';
 import 'package:admin_panal_shopapp/data/data_poduct_Model.dart';
-
 import 'package:admin_panal_shopapp/model/colors.dart';
-
 import 'package:admin_panal_shopapp/widgets/responsive.dart';
 import 'package:admin_panal_shopapp/widgets/search.dart';
 import 'package:flutter/material.dart';
@@ -58,6 +56,7 @@ class _ProductPAgeState extends State<ProductPAge> {
                               // Get.dialog(AlertDialog());
                               Get.dialog(
                                 AlertDialog(
+                                  backgroundColor: scaffoldBackgroundColor,
                                   content: AddProduct(),
                                   actions: [
                                     TextButton(
@@ -66,20 +65,16 @@ class _ProductPAgeState extends State<ProductPAge> {
                                       },
                                       child: Text('Cancel'),
                                     ),
-                                    TextButton(
-                                      onPressed: () {},
-                                      child: Text('Print'),
-                                    ),
                                   ],
                                 ),
                               );
                             },
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: cardBackgroundColor,
+                            ),
                             child: Text(
                               'Add Product',
                               style: TextStyle(color: Colors.greenAccent),
-                            ),
-                            style: ElevatedButton.styleFrom(
-                              backgroundColor: cardBackgroundColor,
                             ),
                           ),
                         ),

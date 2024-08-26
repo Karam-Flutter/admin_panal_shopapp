@@ -5,6 +5,7 @@ import 'package:admin_panal_shopapp/dashboardPage.dart';
 import 'package:admin_panal_shopapp/homePage.dart';
 
 import 'package:admin_panal_shopapp/model/colors.dart';
+import 'package:admin_panal_shopapp/setting.dart';
 import 'package:admin_panal_shopapp/widgets/responsive.dart';
 import 'package:admin_panal_shopapp/widgets/topbar.dart';
 
@@ -295,8 +296,8 @@ class _ScreensExample extends StatelessWidget {
             return AddProduct();
           case 3:
             return DashboardScreen();
-          case 3:
-            return navitest();
+          case 4:
+            return TabBarExample();
 
           default:
             return Text(
