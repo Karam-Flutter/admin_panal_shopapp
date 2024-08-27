@@ -3,6 +3,7 @@ import 'package:admin_panal_shopapp/ProductPage.dart';
 import 'package:admin_panal_shopapp/dashboardPage.dart';
 
 import 'package:admin_panal_shopapp/homePage.dart';
+import 'package:admin_panal_shopapp/logout.dart';
 
 import 'package:admin_panal_shopapp/model/colors.dart';
 import 'package:admin_panal_shopapp/setting.dart';
@@ -298,6 +299,8 @@ class _ScreensExample extends StatelessWidget {
             return DashboardScreen();
           case 4:
             return TabBarExample();
+          case 5:
+            return LogoutScreen();
 
           default:
             return Text(

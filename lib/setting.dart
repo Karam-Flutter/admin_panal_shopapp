@@ -40,7 +40,7 @@ class _TabBarExampleState extends State<TabBarExample>
         bottom: TabBar(
           controller: _tabController,
           tabs: [
-            Tab(text: 'All Ordersssss'),
+            Tab(text: 'All Orders'),
             Tab(text: 'Completed Orders'),
             Tab(text: 'Cancelled Orders'),
           ],

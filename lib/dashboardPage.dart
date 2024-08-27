@@ -20,12 +20,6 @@ class _DashboardScreenState extends State<DashboardScreen> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.transparent,
-        title: Text(
-          '${DateTime.now().day}/${DateTime.now().month}/${DateTime.now().year} Payment History',
-          style: TextStyle(
-            color: Colors.white,
-          ),
-        ),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
